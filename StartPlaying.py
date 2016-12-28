@@ -17,10 +17,11 @@ def main():
 
     menu.add_cascade(label='File', menu=fileMenu)
 
-    button1 = tk.Button(master, text="Quit", command=quit, anchor=tk.W)
-    button1.configure(width=5, background="#FFFFFF", relief=tk.FLAT)
-    window.create_window(10, 10, anchor=tk.NW, window=button1)
     master.config(menu=menu)
+    quitButton = tk.Button(master, text="Quit", command=quit, anchor=tk.W, )
+    quitButton.configure(width=5, activebackground="#aaaaaa", relief=tk.GROOVE)
+    window.create_window(10, 10, anchor=tk.NW, window=quitButton)
+
     window.pack()
 
     tk.mainloop()
